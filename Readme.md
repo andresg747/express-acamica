@@ -14,18 +14,23 @@ En este punto ya deberíamos tener corriendo nuestro servidor con nodemon escuch
 ### Ejercicio propuesto
 Crearemos un servicio para poder consumir una API externa de países.
 
-1- Renombraremos el set de rutas existente, agregándole el prefijo: `/v1` de manera que las rutas sean consumidas como: 
+1- Crearemos un archivo `.env` en la raíz del proyecto con el siguiente contenido:
+`API_BASE_URL=https://restcountries.eu/rest/v2`
+
+2- Renombraremos el set de rutas existente, agregándole el prefijo: `/v1` de manera que las rutas sean consumidas como: 
 - `/v1/paises` [GET]
 - `/v1/pais` [GET, POST, PUT, DELETE]
 
-2- Agregar un nuevo set de rutas con el prefijo: `/v2/`
+3- Agregar un nuevo set de rutas con el prefijo: `/v2/`
 
 Los endpoints disponibles en este nuevo set serán:
 - `/v2/paises` [GET]
 - `/v2/paises/:id` [GET]
 - `/v2/paises/region/:region` [GET]
 
-En la clase veremos cómo:
+**En la clase** veremos cómo:
 - Hacer uso de middlewares para agregar una firma personalizada a cada endpoint.
 - Transformar la colección de datos que responderemos al cliente (limit y sort).
 - Agregar un middleware global para monitorear los tiempos de respuesta del servicio, haciendo uso de `res.locals`.
+
+
