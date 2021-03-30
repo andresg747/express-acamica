@@ -25,8 +25,16 @@ Crearemos un servicio para poder consumir una API externa de países.
 
 Los endpoints disponibles en este nuevo set serán:
 - `/v2/paises` [GET]
-- `/v2/paises/:id` [GET]
+- `/v2/pais/:id` [GET]
 - `/v2/paises/region/:region` [GET]
+
+#### Recursos adicionales
+
+URL para obtener un país por id:
+`https://restcountries.eu/rest/v2/name/{name}`
+
+URL para obtener países por región:
+`https://restcountries.eu/rest/v2/region/{region}`
 
 **En la clase** veremos cómo:
 - Hacer uso de middlewares para agregar una firma personalizada a cada endpoint.
